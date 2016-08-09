@@ -1,4 +1,11 @@
 
+body {
+  font-family: Roboto;
+  background: #E55D87; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #E55D87 , #5FC3E4); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #E55D87 , #5FC3E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 h1 {
   background: #2980b9;
   color: white;
@@ -15,10 +22,6 @@ ul {
   padding: 0;
 }
 
-body {
-  font-family: Roboto;
-}
-
 li {
   background: white;
   height: 40px;
@@ -26,8 +29,16 @@ li {
   color: #666;
 }
 
-li:nth-child(2n) {
-  background: #f7f7f7;
+span {
+  background: #e74c3c;
+  height: 40px;
+  margin-right: 20px;
+  text-align: center;
+  color: white;
+  width: 0;
+  display: inline-block;
+  transition: 0.2s linear;
+  opacity: 0;
 }
 
 input {
@@ -37,6 +48,23 @@ input {
   padding: 13px 13px 13px 20px;
   box-sizing: border-box;
   color: #2980b9;
+  border: 3px solid rgba(0,0,0,0);
+}
+
+.fa-plus {
+  float:right;
+}
+
+
+
+li:nth-child(2n) {
+  background: #f7f7f7;
+}
+
+
+li:hover span {
+  width: 40px;
+  opacity: 1.0;
 }
 
 input:focus {
@@ -51,6 +79,7 @@ input:focus {
   background:#f7f7f7;
   margin:100px auto;
 }
+
 .completed {
   color: gray;
   text-decoration: line-through;
